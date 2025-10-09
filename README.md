@@ -71,4 +71,4 @@
 - belongs_to :order
 
 
-
+# PR用の追記です（あとで削除します） 
