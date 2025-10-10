@@ -9,7 +9,7 @@
 | first_name         | string    | null: false  |
 | last_name_kana     | string    | null: false  |
 | first_name_kana    | string    | null: false  |
-| birthday           | string    | null: false  |
+| birthday           | date      | null: false  |
 
 
 ### Association
@@ -22,7 +22,7 @@
 | Column                  | Type       | Options      |
 | ----------------------- | ---------- | ------------ |
 | name                    | string     | null: false  |
-| description             | string     | null: false  |
+| description             | text       | null: false  |
 | category_id             | integer    | null: false  |
 | status_id               | integer    | null: false  |
 | shipping_fee_id         | integer    | null: false  |
@@ -61,7 +61,7 @@
 | prefecture_id         | integer    | null: false  |
 | city                  | string     | null: false  |
 | house_number          | string     | null: false  |
-| building_name         | string     | null: false  |
+| building_name         | string     |              |
 | phone_number          | string     | null: false  |
 | order                 | references | null: false, foreign key: true  |
 
@@ -71,4 +71,3 @@
 - belongs_to :order
 
 
-# PR用の追記です（あとで削除します） 
