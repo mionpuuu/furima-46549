@@ -26,11 +26,7 @@ class Item < ApplicationRecord
     validates :schedule_delivery_id
   end
 
-  validates :price,
-            numericality: {
-              only_integer: true,
-              greater_than_or_equal_to: 300,
-              less_than_or_equal_to: 9_999_999,
-              message: 'must be half-width numbers'
-            }
+  validates :price, presence: true
+  validates :price, numericality: { only_integer: true, message: 'must be half-width numbers' }
+  validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
 end
