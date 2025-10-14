@@ -21,6 +21,19 @@ class ItemsController < ApplicationController
     @item = Item.find(params.require(:id))
   end
 
+  def edit
+    @item = Item.find(params.require(:id))
+  end
+
+  def update
+    @item = Item.find(params.require(:id))
+    if @item.merge(item_params).save
+      redirect_to root_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def item_params
