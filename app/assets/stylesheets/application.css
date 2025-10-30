@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.preview-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* 画像を切り取って表示 */
+  border-radius: 8px; /* 角を丸くする（オプション） */
+}
