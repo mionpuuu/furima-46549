@@ -35,11 +35,6 @@
   cursor: pointer;
 }
 
-.main-image {
-  height: 200px;
-  width: 200px;
-}
-
 .image-delete-button {
   text-align: center;
   border: solid 1px;
