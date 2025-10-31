@@ -3,7 +3,7 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one :order
-  has_one_attached :image
+  has_many_attached :images
 
   belongs_to :category
   belongs_to :status
@@ -14,9 +14,10 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :description
-    validates :image
     validates :price
   end
+
+  validates :images, length: { minimum: 1, maximum: 5, message: 'は1枚以上5枚以下にしてください' }
 
   with_options numericality: { other_than: 1, message: "can't be blank" } do
     validates :category_id

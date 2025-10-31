@@ -205,3 +205,56 @@
   font-weight: bold;
   font-size: 23px;
 }
+
+.item-img-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Sold Out表示（既存のものがあれば上書き） */
+.main-image .sold-out {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-10deg);
+}
+
+.sold-out span {
+  color: #FFF;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* サブ画像エリア */
+.other-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.other-image {
+  flex-shrink: 0;
+}
+
+.item-sub-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: rgb(205, 202, 202);
+}

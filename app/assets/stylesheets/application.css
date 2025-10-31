@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+.preview-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* 画像を切り取って表示 */
+  border-radius: 8px; /* 角を丸くする（オプション） */
+}
+
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
